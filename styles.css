@@ -1,0 +1,142 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{ /* seleciona todos os elementos HTML e aplica os estilos */
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center; /*alinhado ao centro da coluna, pois foi usado dentro do grid. Onde é definido as colunas*/
+    text-align: center; /*alinha tudo que está dentro do elemento do bloco, inclusive imagens*/
+}
+
+.container {
+    height: 100vh; 
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa{
+    margin: 0 6em; /*espaçamento entre a esquerda e a direita, apenas em dois lados*/
+}
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;   
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*1em superior, 0 direito, 2em inferior, 0 esquerda */
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em; /*espaçamento interno, dentro dos botões*/
+    color: var(--branco-principal);
+    display: block; /*bloqueia e usa o bloco inteiro*/
+    text-decoration: none; /*remove o sublinhado do link*/
+    margin-bottom: 1em; /*espaçamento entre os botões, espaçamento externo*/
+}
+
+.container__botao:hover{
+    background-color: var(--branco-principal);
+    color: var(--cinza-secundario);
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+.secundario__imagem {
+    width: 80%;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block; /*não permite que o elemento ocupe a linha inteira no bloco, block faz a quebra de linha*/
+    margin-top: 1em;
+}
+
+.container__seccion__dispositivos{
+    text-align: center;
+}
+.descricao__dispositivos{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;/* remove os pontos dos tópicos da lista*/
+    margin: 5em 0;
+}
+
+.lista__item{
+    color: var(--branco-principal);
+    font-size: 32px;
+}
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+    
+}
+
+.rodape__link{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    list-style-type: none;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em; /*Margem a esquerda*/
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.texto__rodape{
+    margin: 1em 0; /*Margem para cima, margem para baixo*/
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
